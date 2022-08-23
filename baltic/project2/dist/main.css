@@ -1,0 +1,144 @@
+body {
+  min-height: 140vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  align-items: center;
+  justify-items: center;
+  --clr-green-500: hsl(169, 100%, 21%);
+  background: url(../assets/greenCircleBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+body .login-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  --ws-unit: 2em;
+  max-width: 20em;
+  border-radius: var(--br-small);
+  box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5019607843);
+  background-color: #fff;
+  overflow: hidden;
+  padding: 2em;
+  font-size: 18px;
+}
+body .login-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-unit);
+}
+body .login-container form fieldset img {
+  max-width: 100%;
+  margin-bottom: var(--ws-unit);
+}
+body .login-container form fieldset ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-unit);
+  --line-height: 1.2em;
+  --scale-up: 0.8;
+}
+body .login-container form fieldset ul li {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+body .login-container form fieldset label {
+  height: calc(var(--line-height) * 2 + var(--line-height) * var(--scale-up));
+  --translate-up: translateY(calc(0px - (var(--line-height) * (2 - var(--scale-up))))) scale(var(--scale-up));
+  line-height: var(--line-height);
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+  border-radius: 0.2em;
+}
+body .login-container form fieldset label > * {
+  grid-area: 1/1/2/2;
+}
+body .login-container form fieldset label .label-text {
+  transition: all 0.3s;
+  transition-property: transform;
+  transform-origin: left top;
+  padding: calc(var(--line-height) / 2) 0;
+}
+body .login-container form fieldset input,
+body .login-container form fieldset button {
+  width: 100%;
+  border: 0;
+}
+body .login-container form fieldset input {
+  padding: calc(var(--line-height) / 2) 0;
+  background: transparent;
+}
+body .login-container form fieldset input:-moz-placeholder-shown ~ .label-text {
+  transform: translateY(0);
+}
+body .login-container form fieldset input:-ms-input-placeholder ~ .label-text {
+  transform: translateY(0);
+}
+body .login-container form fieldset input:placeholder-shown ~ .label-text {
+  transform: translateY(0);
+}
+body .login-container form fieldset input ~ .label-text {
+  transform: var(--translate-up);
+}
+body .login-container form fieldset input:focus:-moz-placeholder-shown ~ .label-text {
+  transform: var(--translate-up);
+}
+body .login-container form fieldset input:focus:-ms-input-placeholder ~ .label-text {
+  transform: var(--translate-up);
+}
+body .login-container form fieldset input:focus:placeholder-shown ~ .label-text {
+  transform: var(--translate-up);
+}
+body .login-container form fieldset input:focus ~ .bar::after {
+  transform: scale(1);
+}
+body .login-container form fieldset input:focus {
+  outline: 0;
+}
+body .login-container form fieldset .bar {
+  --height: 2px;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  width: 100%;
+  height: var(--height);
+  position: relative;
+  border-radius: 100vw;
+}
+body .login-container form fieldset .bar::after {
+  content: "";
+  transition: all 0.3s;
+  height: calc(1.5 * var(--height));
+  background-color: var(--clr-green-500);
+  display: block;
+  transform: scale(0);
+  border-radius: 100vw;
+}
+body .login-container form fieldset button {
+  background-color: var(--clr-green-500);
+  color: #fff;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: var(--br-small);
+}
+body footer {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.25em;
+  font-size: 0.8em;
+}
+body footer p {
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

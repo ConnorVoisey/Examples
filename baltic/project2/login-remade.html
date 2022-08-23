@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="dist/reset.css" />
+		<link rel="stylesheet" href="dist/main.css" />
+	</head>
+	<body>
+		<div class="login-container">
+			<form method="POST" action="index.php">
+				<fieldset hidden>
+					<legend>Meta Data</legend>
+					<input type="hidden" name="module" value="Users" />
+					<input type="hidden" name="action" value="Login" />
+				</fieldset>
+				<fieldset>
+					<legend><img class="img-responsive user-logo" src="assets/green-circle-logo.JPG" alt="Login" /></legend>
+					<ul>
+						<li>
+							<label for="username">
+								<input type="text" id="username" placeholder=" " required maxlength="100" autocomplete="username" />
+								<span class="label-text">Username</span>
+								<div class="bar"></div>
+							</label>
+						</li>
+						<li>
+							<label for="password">
+								<input type="password" id="password" placeholder=" " required maxlength="100" minlength="4" autocomplete="current-password" />
+								<span class="label-text">Password</span>
+								<div class="bar"></div>
+							</label>
+						</li>
+						<li>
+							<button type="submit" class="button primary">Sign In</button>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+		</div>
+
+		<footer>
+			<p>
+				Powered by vtiger CRM - 7.4.0&nbsp;&nbsp;© 2004 - 2022&nbsp;&nbsp;
+				<a href="//www.vtiger.com" target="_blank">Vtiger</a>&nbsp;|&nbsp;
+				<a href="https://www.vtiger.com/privacy-policy" target="_blank">Privacy Policy</a>
+			</p>
+		</footer>
+	</body>
+</html>
